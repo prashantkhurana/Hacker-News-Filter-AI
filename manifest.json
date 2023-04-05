@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Hacker News Filter",
+    "version": "1.0.0",
+    "description": "Filter out AI and GPT submissions from Hacker News",
+    "content_scripts": [
+      {
+        "matches": ["*://news.ycombinator.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "permissions": [
+        "storage"
+      ],
+    "icons": {
+        "48": "icon.png"
+      },
+    "action": {
+        "default_icon": {
+          "128": "icon.png"
+        },
+        "default_title": "Filtered Links",
+        "default_popup": "popup.html"
+      }
+  }
+  
