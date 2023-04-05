@@ -5,7 +5,7 @@ window.onload = function() {
     // Find all the submissions on the page
     const submissions = document.querySelectorAll(".athing");
     const filteredLinks = [];
-    const isHomePage = window.location.href === "https://news.ycombinator.com/";
+    const isHomePage = window.location.href === "https://news.ycombinator.com/" || window.location.href === "https://news.ycombinator.com/news";
     if (!isHomePage) {
         return;
     }
