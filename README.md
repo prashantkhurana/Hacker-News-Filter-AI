@@ -2,6 +2,8 @@
 
 This is a Chrome extension that filters out links containing AI/GPT words on the front page of Hacker News. The filtered links are displayed them in a popup when the user clicks on the extension icon.
 
+![Screenshot](screenshot.png) 
+
 # Install
 1. Chrome : Pending approval
 2. Firefox : Pending approval  
