@@ -13,12 +13,12 @@ window.onload = function () {
     for (let i = 0; i < submissions.length; i++) {
         const submission = submissions[i];
 
-        // Find the submission title and content elements
+        // Find the submission title and metadata(author, points, etc) elements
         const title = submission.querySelector(".title a");
-        const content = submission.nextElementSibling;
+        const submissionMetaData = submission.nextElementSibling;
 
-        // Check if the submission title or content contains the keywords
-        const shouldRemove = (title && keywordRegex.test(title.textContent)) || content && keywordRegex.test(content.textContent);
+        // Check if the submission title contains the keywords
+        const shouldRemove = (title && keywordRegex.test(title.textContent))
         if (shouldRemove) {
             const link = {
                 title: title ? title.textContent.trim() : "",
@@ -26,6 +26,7 @@ window.onload = function () {
             };
             filteredLinks.push(link);
             submission.parentNode.removeChild(submission);
+            submissionMetaData.parentNode.removeChild(submissionMetaData);
         }
     }
 
