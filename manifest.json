@@ -21,7 +21,8 @@
         },
         "default_title": "Filtered Links",
         "default_popup": "popup.html"
-      },
+      }
+      ,
       "browser_specific_settings": {
         "gecko": {
           "id": "hn_filter@example.org"
